@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       <title>Exportador Excel</title>
+       <script type="text/javascript" src="jquery-3.2.1.js"></script>
+       <style type="text/css">
+        td{
+           border: black 2px solid; 
+        }
+
+        .botonx{cursor: pointer;}
+        </style>
+       
+    </head>
+
+    <body>
+        
+<center>
+    <form action="export.php" method="POST" id="formulario_x">
+    <p>Mandalo a Excel<img src="arrow.png" width="35px;" height="35px;" class="botonx" /></p>
+    <input type="hidden" id="test" name="test">
+    </form>
+    <div id="print">
+        <table>
+
+            <tr><td>BENZONATATE (capsule 100 mg)</td><td>2017-12-19</td><td></td><td>Take 1 capsule by mouth three times a day</td><td></td></tr>|<tr><td>ATORVASTATIN (tablet 20 mg)</td><td>2017-06-28</td><td></td><td>Take 1 tablet by mouth at bedtime</td><td></td></tr>|<tr><td>GUAIFENESIN (liquid 100 mg/5 mL)</td><td>2017-08-29</td><td>2017-09-05</td><td>Take 1 teaspoon by mouth four times a day</td><td></td></tr>|<tr><td>ALBUTEROL SULFATE (HFA aerosol inhaler 90 mcg/actuation)</td><td>2018-03-26</td><td></td><td>Inhale 1 puff using inhaler three times a day</td><td></td></tr>|<tr><td>MONTELUKAST (tablet 10 mg)</td><td>2017-12-19</td><td></td><td>Take 1 tablet by mouth at bedtime</td><td></td></tr>|<tr><td>GABAPENTIN (capsule 300 mg)</td><td>2017-06-28</td><td></td><td>Take 1 capsule by mouth three times a day</td><td></td></tr>|<tr><td>NITROFURANTOIN MACROCRYSTAL (capsule 100 mg)</td><td>2017-06-28</td><td>2017-07-01</td><td> 1 capsule by mouth twice a day</td><td></td></tr>|<tr><td>FLUTICASONE (HFA aerosol inhaler 110 mcg/actuation)</td><td>2017-08-29</td><td></td><td>Inhale 1 puff using inhaler twice a day</td><td></td></tr>|<tr><td>CARBAMIDE PEROXIDE (drops 6.5%)</td><td>2017-12-19</td><td></td><td>Instill 3 drop into affected ear twice a day</td><td></td></tr>|<tr><td>METFORMIN (tablet 1,000 mg)</td><td>2017-05-27</td><td></td><td>Take 1 tablet by mouth twice a day</td><td></td></tr>|<tr><td>NYSTATIN-TRIAMCINOLONE (cream 100,000-0.1 unit/g-%)</td><td>2018-03-07</td><td>2018-07-04</td><td>Apply 1 a small amount to affected area twice a day</td><td></td></tr>|<tr><td>CARBAMIDE PEROXIDE (drops 6.5%)</td><td>2017-06-28</td><td>2017-07-01</td><td>Instill 2 drop into affected ear twice a day</td><td></td></tr>|<tr><td>NAPROXEN SODIUM (tablet 550 mg)</td><td>2017-11-10</td><td>2017-11-20</td><td>Take 1 tablet by mouth every twelve hours</td><td></td></tr>|<tr><td>GABAPENTIN (capsule 300 mg)</td><td>2015-03-12</td><td>2015-06-10</td><td>Take 1 capsule by mouth at bedtime</td><td></td></tr>|<tr><td>PREDNISONE (tablet 20 mg)</td><td>2017-12-30</td><td>2018-01-04</td><td>Take 1 tablet by mouth twice a day</td><td></td></tr>|<tr><td>GABAPENTIN (capsule 300 mg)</td><td>2017-05-27</td><td>2017-06-28</td><td>Take 1 capsule by mouth at bedtime</td><td>Dosage Change</td></tr>|<tr><td>GLIPIZIDE (tablet 10 mg)</td><td>2015-03-12</td><td>2015-06-10</td><td>Take 1 tablet by mouth twice a day</td><td></td></tr>|<tr><td>NYSTATIN-TRIAMCINOLONE (cream 100,000-0.1 unit/g-%)</td><td>2017-11-10</td><td>2017-11-28</td><td>Apply 1 a small amount to affected area once a day</td><td>Completion of Therapy</td></tr>|<tr><td>GLIPIZIDE (tablet 10 mg)</td><td>2017-05-27</td><td></td><td>Take 1 tablet by mouth twice a day</td><td></td></tr>|<tr><td>METFORMIN (tablet 1,000 mg)</td><td>2015-03-12</td><td>2015-06-10</td><td>Take 1 tablet by mouth twice a day</td><td></td></tr>|<tr><td>AZITHROMYCIN (tablet 250 mg)</td><td>2017-12-30</td><td>2018-01-04</td><td> 2 tablet by mouth single dose</td><td></td></tr>|<tr><td>LISINOPRIL (tablet 5 mg)</td><td>2017-06-28</td><td></td><td>Take 1 tablet by mouth once a day</td><td></td></tr>|<tr><td>RANITIDINE HCL (tablet 150 mg)</td><td>2015-03-12</td><td>2017-05-27</td><td>Take 1 tablet by mouth every twelve hours</td><td>Completion of Therapy</td></tr>|<tr><td>ACETAMINOPHEN (tablet 500 mg)</td><td>2017-05-27</td><td>2017-06-03</td><td>Take 2 tablet by mouth every six hours</td><td></td></tr>|<tr><td>CARBAMIDE PEROXIDE (drops 6.5%)</td><td>2017-05-27</td><td>2017-05-30</td><td>Instill 2 drop into affected ear twice a day</td><td></td></tr>
+
+        </table>
+    </div>
+</center>    
+
+        <script language="javascript">
+            $(document).ready(function){
+                $(".botonx").click(function(event){
+                $("#test").val( $("<div>").append($("#print").eq(0).clone()).html());
+                $("#formulario_x").submit();
+            });
+        });
+
+
+        </script>
+
+    </body>
+</html>

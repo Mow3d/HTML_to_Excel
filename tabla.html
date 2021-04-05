@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       <title>Exportador Excel</title>
+       <script type="text/javascript" src="jquery-3.2.1.js"></script>
+       <style type="text/css">
+        td{
+           border: black 2px solid; 
+        }
+        </style>
+       
+    </head>
+
+    <body>
+        
+<center>
+    <form action="export.php" method="POST" id="formulario_x">
+        <input type="hidden" id="test" name="test">
+    </form>
+    <div id="print">
+        <table>
+
+        </table>
+    </div>
+
+        <script language="javascript">
+            $(document).ready(function){
+                $(".botonx").click(function(event){
+                $("#test").val( $("<div>").append($("#print").eq(0).clone()).html());
+                $("#formulario_x").submit();
+            });
+        });
+
+
+        </script>
+
+    </body>
+</html>
